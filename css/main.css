@@ -1,0 +1,371 @@
+@import url(https://fonts.googleapis.com/css?family=Ubuntu:300,400);
+html {
+    overflow-x: hidden;
+    background-color: hsl(220, 100%, 74%);
+    margin: 0;
+    padding: 0;
+}
+body {
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+div.nav {
+    width: 100%;
+    position: fixed;
+    z-index: 10;
+    top: 0px;
+    left: 0px;
+    margin: 0px;
+    padding: 0px;
+}
+div.postbox {
+    width: calc(100% - 120px);
+    background-color: #ffffff;
+    position: absolute;
+    z-index: 2;
+    left: 0px;
+    top: 0px;
+    margin-bottom: 50px;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 140px;
+    padding: 0px;
+    padding-left: 20px;
+    -webkit-box-shadow: 5px 5px 0px 0px rgba(77,136,255,1);
+    -moz-box-shadow: 5px 5px 0px 0px rgba(77,136,255,1);
+    box-shadow: 5px 5px 0px 0px rgba(77,136,255,1);
+}
+div.orderedrelease {
+    width: 300px;
+    height: 450px;
+    display: inline-block;
+    float: left;
+    position: relative;
+    z-index: 2;
+    padding: 0px;
+    margin: 0px;
+    margin-right: 15px;
+}
+p {
+    font-family: 'Ubuntu';
+    color: #ffffff;
+}
+p.title {
+    position: absolute;
+    font-weight: bold;
+    font-family: 'Ubuntu';
+    color: #ffffff;
+}
+h1 {
+    font-weight: bold;
+    position: relative;
+    display: inline-block;
+    font-family: 'Ubuntu';
+    color: hsl(220, 100%, 74%);
+    text-shadow: 1px 1px 0px rgba(77, 136, 255, 1.0);
+    margin: 0;
+    margin-top: 20px;
+    text-align: center;
+    width: 100%;
+}
+h2 {
+    font-weight: bold;
+    font-family: 'Ubuntu';
+    color: hsl(220, 100%, 74%);
+    text-shadow: 1px 1px 0px rgba(77, 136, 255, 1.0);
+    font-size: 20;
+    margin: 0;
+    text-align: center;
+}
+h3 {
+    font-weight: bold;
+    font-family: 'Ubuntu';
+    color: hsl(220, 100%, 74%);
+    text-shadow: 1px 1px 0px rgba(77, 136, 255, 1.0);
+    font-size: 20;
+    margin: 0;
+    text-align: left;
+}
+div.footer {
+    position: absolute;
+    width: calc(100% + 100px);
+    height: 30px;
+    background-color: rgba(77, 136, 255, 0.8);
+    left: -50px;
+    right: 0;
+    bottom: -50px;
+}
+p.footertext {
+    position: relative;
+    width: 100%;
+    font-size: 14;
+    text-align: center;
+    top: -10px;
+}
+img.xda {
+    position: relative;
+    float: right;
+    height: 20px;
+    width: 20px;
+    top: -23px;
+}
+img.github {
+    position: relative;
+    float: right;
+    height: 20px;
+    width: 20px;
+    top: -23px;
+    right: 2px;
+}
+div.contributor {
+    width: 164px;
+    margin-left: auto ;
+    margin-right: auto ;
+}
+p.text {
+    font-family: 'Ubuntu';
+    color: hsl(220, 100%, 74%);
+    margin: 0;
+    margin-bottom: 20px;
+}
+p.text2 {
+    font-family: 'Ubuntu';
+    color: hsl(220, 100%, 74%);
+    margin: 0;
+    margin-left: 180px;
+    margin-right: 200px;
+    margin-bottom: 20px;
+}
+div.releaseshref
+{
+    top: 5px;
+    right: 315px;
+    position: absolute;
+    width: 150px;
+    height: 26px;
+}
+div.backgroundreleaseshref
+{
+    position: absolute;
+    width: 150px;
+    height: 26px;
+}
+p.releaseshreftext {
+    position: absolute;
+    color: #ffffff;
+    top: 2px;
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Ubuntu';
+    text-align: center;
+    width: 150px;
+    z-index: 5;
+}
+div.animatedreleaseshref {
+    animation-name: releaseshrefleave;
+    animation-duration: 0.4s;
+    z-index: 4;
+    background-color: hsl(220, 100%, 74%);
+}
+div.backgroundreleaseshref {
+    height: 0%;
+    overflow: hidden;
+    z-index: 4;
+}
+div.releaseshref:hover > div.backgroundreleaseshref {
+    animation-name: releaseshrefhover;
+    animation-duration: 0.4s;
+    z-index: 4;
+    background-color: hsl(220, 100%, 74%);
+    width: 100%;
+    height: 100%;
+    top: 0px;
+}
+
+@keyframes releaseshrefhover {
+    0% {height: 0%; top: 0px;}
+    100% {height: 100%; top: 0px;}
+}
+@keyframes releaseshrefleave {
+    0% {height: 100%; top: 0px;}
+    100% {height: 0%; top: 0px;}
+}
+div.buildinghref
+{
+    top: 5px;
+    right: 160px;
+    position: absolute;
+    width: 150px;
+    height: 26px;
+}
+div.backgroundbuildinghref
+{
+    position: absolute;
+    width: 150px;
+    height: 26px;
+}
+p.buildinghreftext {
+    position: absolute;
+    color: #ffffff;
+    top: 2px;
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Ubuntu';
+    text-align: center;
+    width: 150px;
+    z-index: 5;
+}
+div.animatedbuildinghref {
+    animation-name: buildinghrefleave;
+    animation-duration: 0.4s;
+    z-index: 4;
+    background-color: hsl(220, 100%, 74%);
+}
+div.backgroundbuildinghref {
+    height: 0%;
+    overflow: hidden;
+    z-index: 4;
+}
+div.buildinghref:hover > div.backgroundbuildinghref {
+    animation-name: buildinghrefhover;
+    animation-duration: 0.4s;
+    z-index: 4;
+    background-color: hsl(220, 100%, 74%);
+    width: 100%;
+    height: 100%;
+    top: 0px;
+}
+
+@keyframes buildinghrefhover {
+    0% {height: 0%; top: 0px;}
+    100% {height: 100%; top: 0px;}
+}
+@keyframes buildinghrefleave {
+    0% {height: 100%; top: 0px;}
+    100% {height: 0%; top: 0px;}
+}
+div.contributorshref
+{
+    top: 5px;
+    right: 5px;
+    position: absolute;
+    width: 150px;
+    height: 26px;
+}
+div.backgroundcontributorshref
+{
+    position: absolute;
+    width: 150px;
+    height: 26px;
+}
+p.contributorshreftext {
+    position: absolute;
+    color: #ffffff;
+    top: 2px;
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Ubuntu';
+    text-align: center;
+    width: 150px;
+    z-index: 5;
+}
+div.animatedcontributorshref {
+    animation-name: contributorshrefleave;
+    animation-duration: 0.4s;
+    z-index: 4;
+    background-color: hsl(220, 100%, 74%);
+}
+div.backgroundcontributorshref {
+    height: 0%;
+    overflow: hidden;
+    z-index: 4;
+}
+div.contributorshref:hover > div.backgroundcontributorshref {
+    animation-name: contributorshrefhover;
+    animation-duration: 0.4s;
+    z-index: 4;
+    background-color: hsl(220, 100%, 74%);
+    width: 100%;
+    height: 100%;
+    top: 0px;
+}
+
+@keyframes contributorshrefhover {
+    0% {height: 0%; top: 0px;}
+    100% {height: 100%; top: 0px;}
+}
+@keyframes contributorshrefleave {
+    0% {height: 100%; top: 0px;}
+    100% {height: 0%; top: 0px;}
+}
+
+
+
+div.downloadbtn {
+    bottom: 15px;
+    position: absolute;
+    width: 150px;
+    height: 30px;
+}
+a.release {
+    display: block;
+    margin: 0px;
+    width: 150px;
+}
+div.backgrounddownloadbtn {
+    position: absolute;
+    width: 150px;
+    height: 30px;
+    z-index: 5;
+}
+p.downloadbtntext {
+    position: absolute;
+    color: hsl(220, 100%, 74%);
+    top: 3px;
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Ubuntu';
+    text-align: center;
+    width: 150px;
+}
+p.downloadbtntexthidden {
+    position: absolute;
+    color: #ffffff;
+    top: 3px;
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Ubuntu';
+    text-align: center;
+    width: 150px;
+    z-index: 5;
+}
+div.animateddownloadbtn {
+    animation-name: downloadbtnleave;
+    animation-duration: 0.4s;
+    z-index: 4;
+    background-color: hsl(220, 100%, 74%);
+}
+div.backgrounddownloadbtn {
+    height: 0%;
+    overflow: hidden;
+    z-index: 4;
+}
+div.downloadbtn:hover > div.backgrounddownloadbtn {
+    animation-name: downloadbtnhover;
+    animation-duration: 0.4s;
+    z-index: 4;
+    background-color: hsl(220, 100%, 74%);
+    width: 100%;
+    height: 100%;
+    top: 0px;
+}
+
+@keyframes downloadbtnhover {
+    0% {height: 0%; top: 0px;}
+    100% {height: 100%; top: 0px;}
+}
+@keyframes downloadbtnleave {
+    0% {height: 100%; top: 0px;}
+    100% {height: 0%; top: 0px;}
+}
